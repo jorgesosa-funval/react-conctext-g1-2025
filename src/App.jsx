@@ -6,14 +6,6 @@ import CardGrid from './components/CardGrid'
 export default function App() {
 
   const [ open, setOpen ] = useState(false)
-  const [ counter, setCounter ] = useState(3)
-  function decrement() {
-    setCounter(counter - 1)
-  }
-  function increment() {
-    setCounter(counter + 1)
-  }
-
   function toggleModal(e) {
     if (e.target.role === "modal" || e.target.role === "open-modal") {
       setOpen(!open)
@@ -30,21 +22,14 @@ export default function App() {
 
       </div>
 
-      <ShowCounter
-        counter={counter}
-      />
+      <ShowCounter />
 
-      <CardGrid
-        counter={counter}
-      />
+      <CardGrid />
 
       {
         open &&
         <Modal
           onClose={toggleModal}
-          onIncrement={increment}
-          onDecrement={decrement}
-          counter={counter}
         />
       }
 

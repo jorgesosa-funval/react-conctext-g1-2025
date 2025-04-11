@@ -1,6 +1,6 @@
 import React from 'react' 
 import Contador from './Contador'
-export default function Modal({ onClose, onIncrement, onDecrement, counter }) {
+export default function Modal({ onClose}) {
 
     return (
         <div className='w-full h-screen fixed bg-black/40'
@@ -8,11 +8,7 @@ export default function Modal({ onClose, onIncrement, onDecrement, counter }) {
             <div role='modal-content' className='w-full h-1/2 bg-white'>
                 <p className='text-center text-2xl'>Soy el modal</p>
 
-                <Contador
-                    onIncrement ={onIncrement}
-                    onDecrement ={onDecrement} 
-                    counter={counter}
-                />
+                <Contador/>
                 
             </div>
         </div>
